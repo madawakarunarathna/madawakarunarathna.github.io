@@ -1,2 +1,1 @@
-## Welcome to GitHub Pages
-<h1>  Hi I am Madawa</h1>
+<h1>Madawa karunarathna</h1>
