@@ -361,86 +361,76 @@
             <div class="p-6">
                 <!-- Projects Tab -->
                 <div id="projects" class="tab-content active">
-                    <div class="space-y-6">
-                        <div class="project-card p-6 border rounded-lg hover:shadow-md transition-shadow">
-                            <div class="flex justify-between items-start mb-3">
-                                <h4 class="text-xl font-semibold text-gray-800">Horizon - Debt Collection Autonomus</h4>
-                                <span class="text-gray-500">May 2023 - Dec 2024</span>
-                            </div>
-                            <p class="text-gray-600 mb-4">Project explanation</p>
-                            <div class="mb-4">
-                                <h5 class="font-medium text-gray-700 mb-2">Key Responsibilities:</h5>
-                                <ul class="list-disc list-inside text-gray-600 space-y-1">
-                                    <li>Reponsibility 1</li>
-                                    <li>Reponsibility 2</li>
-                                    <li>Reponsibility 3</li>
-                                </ul>
-                            </div>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="tech-chip">C#</span>
-                                <span class="tech-chip">.NET 6</span>
-                                <span class="tech-chip">RabbitMq</span>
-                                <span class="tech-chip">SQL</span>
-                                <span class="tech-chip">Azure DevOps</span>
-                                <span class="tech-chip">Git</span>
-                                <span class="tech-chip">Angular 16.x</span>
-                                <span class="tech-chip">gRPC</span>
-                                <span class="tech-chip">Docker Swarm</span>
-                                <span class="tech-chip">Kibana</span>
-                                <span class="tech-chip">Elastic Search</span>
-                            </div>
-                        </div>
-
-                        <div class="project-card p-6 border rounded-lg hover:shadow-md transition-shadow">
-                            <div class="flex justify-between items-start mb-3">
-                                <h4 class="text-xl font-semibold text-gray-800">Cube - Regulatory Information Platform</h4>
-                                <span class="text-gray-500">Feb 2022 - April 2023</span>
-                            </div>
-                            <p class="text-gray-600 mb-4">A platform that provides information on jurisdiction and regulations of various countries in one place. Working as a member of the Processing team, responsible for handling structured XML files and data extraction into SQL tables.</p>
-                            <div class="mb-4">
-                                <h5 class="font-medium text-gray-700 mb-2">Key Responsibilities:</h5>
-                                <ul class="list-disc list-inside text-gray-600 space-y-1">
-                                    <li>Handled structured files in XML format and extracted data into SQL tables</li>
-                                    <li>Contributed to the development and implementation of critical system components</li>
-                                    <li>Collaborated with team members to ensure project success</li>
-                                </ul>
-                            </div>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="tech-chip">C#</span>
-                                <span class="tech-chip">.NET Core</span>
-                                <span class="tech-chip">Java</span>
-                                <span class="tech-chip">SQL</span>
-                                <span class="tech-chip">Azure DevOps</span>
-                                <span class="tech-chip">Git</span>
-                                <span class="tech-chip">Angular 10.x</span>
-                                <span class="tech-chip">Azure Service Bus</span>
-                                <span class="tech-chip">Docker</span>
+                    <div class="space-y-2">
+                        <!-- Cube Project -->
+                        <div class="project-container">
+                            <button onclick="toggleProject('cube-project')" class="w-full project-header p-4 bg-white rounded-lg border hover:shadow-sm transition-all flex justify-between items-center">
+                                <div class="flex items-center gap-4">
+                                    <svg class="transform transition-transform project-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <h4 class="text-lg font-semibold text-gray-800">Cube - Regulatory Information Platform</h4>
+                                </div>
+                                <span class="text-gray-500">Feb 2022 - Present</span>
+                            </button>
+                            <div id="cube-project" class="project-content hidden">
+                                <div class="p-6 border border-t-0 rounded-b-lg">
+                                    <p class="text-gray-600 mb-4">A platform that provides information on jurisdiction and regulations of various countries in one place. Working as a member of the Processing team, responsible for handling structured XML files and data extraction into SQL tables.</p>
+                                    <div class="mb-4">
+                                        <h5 class="font-medium text-gray-700 mb-2">Key Responsibilities:</h5>
+                                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                            <li>Handled structured files in XML format and extracted data into SQL tables</li>
+                                            <li>Contributed to the development and implementation of critical system components</li>
+                                            <li>Collaborated with team members to ensure project success</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="tech-chip">C#</span>
+                                        <span class="tech-chip">.NET Core</span>
+                                        <span class="tech-chip">Java</span>
+                                        <span class="tech-chip">SQL</span>
+                                        <span class="tech-chip">Azure DevOps</span>
+                                        <span class="tech-chip">Git</span>
+                                        <span class="tech-chip">Angular 10.x</span>
+                                        <span class="tech-chip">Azure Service Bus</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="project-card p-6 border rounded-lg hover:shadow-md transition-shadow">
-                            <div class="flex justify-between items-start mb-3">
-                                <h4 class="text-xl font-semibold text-gray-800">Paycor Retainer - Payroll Processing System</h4>
+                        <!-- Paycor Project -->
+                        <div class="project-container">
+                            <button onclick="toggleProject('paycor-project')" class="w-full project-header p-4 bg-white rounded-lg border hover:shadow-sm transition-all flex justify-between items-center">
+                                <div class="flex items-center gap-4">
+                                    <svg class="transform transition-transform project-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <h4 class="text-lg font-semibold text-gray-800">Paycor Retainer - Payroll Processing System</h4>
+                                </div>
                                 <span class="text-gray-500">Oct 2020 - Feb 2022</span>
-                            </div>
-                            <p class="text-gray-600 mb-4">A comprehensive payroll processing system for US-based company Paycor, including tax calculation for each state and payment processing facilities.</p>
-                            <div class="mb-4">
-                                <h5 class="font-medium text-gray-700 mb-2">Key Responsibilities:</h5>
-                                <ul class="list-disc list-inside text-gray-600 space-y-1">
-                                    <li>Developed new features and fixed bugs in the payroll processing system</li>
-                                    <li>Provided 24/7 support for the product</li>
-                                    <li>Implemented Test-Driven Development (TDD) patterns</li>
-                                    <li>Followed Agile methodology for software development</li>
-                                </ul>
-                            </div>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="tech-chip">.NET Core 2.1</span>
-                                <span class="tech-chip">JavaScript</span>
-                                <span class="tech-chip">Angular</span>
-                                <span class="tech-chip">Azure</span>
-                                <span class="tech-chip">C#</span>
-                                <span class="tech-chip">Hangfire</span>
-                                <span class="tech-chip">Azure Service Bus</span>
+                            </button>
+                            <div id="paycor-project" class="project-content hidden">
+                                <div class="p-6 border border-t-0 rounded-b-lg">
+                                    <p class="text-gray-600 mb-4">A comprehensive payroll processing system for US-based company Paycor, including tax calculation for each state and payment processing facilities.</p>
+                                    <div class="mb-4">
+                                        <h5 class="font-medium text-gray-700 mb-2">Key Responsibilities:</h5>
+                                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                            <li>Developed new features and fixed bugs in the payroll processing system</li>
+                                            <li>Provided 24/7 support for the product</li>
+                                            <li>Implemented Test-Driven Development (TDD) patterns</li>
+                                            <li>Followed Agile methodology for software development</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="tech-chip">.NET Core 2.1</span>
+                                        <span class="tech-chip">JavaScript</span>
+                                        <span class="tech-chip">Angular</span>
+                                        <span class="tech-chip">Azure</span>
+                                        <span class="tech-chip">C#</span>
+                                        <span class="tech-chip">Hangfire</span>
+                                        <span class="tech-chip">Azure Service Bus</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -541,5 +531,25 @@
             // Add active class to selected tab button
             const selectedBtn = document.querySelector(`[data-tab="${tabId}"]`);
             selectedBtn.classList.add('active-tab');
+        }
+
+        function toggleProject(projectId) {
+            const projectContent = document.getElementById(projectId);
+            const projectContainer = projectContent.parentElement;
+            const allProjects = document.querySelectorAll('.project-container');
+            
+            // Close other projects
+            allProjects.forEach(container => {
+                if (container !== projectContainer) {
+                    container.classList.remove('expanded');
+                    container.querySelector('.project-content').classList.remove('show');
+                    container.querySelector('.project-content').classList.add('hidden');
+                }
+            });
+            
+            // Toggle current project
+            projectContainer.classList.toggle('expanded');
+            projectContent.classList.toggle('hidden');
+            projectContent.classList.toggle('show');
         }
     </script>
