@@ -5,109 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Madawa Karunarathna - Senior Software Engineer</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <style>
-        .career-path {
-            position: relative;
-        }
-        .career-path .company {
-            position: relative;
-            padding-left: 35px;
-        }
-        .career-path .company::before {
-            content: '✦';
-            position: absolute;
-            left: 0;
-            top: -4px;
-            color: #4F46E5;
-            width: 25px;
-            text-align: center;
-            font-size: 1.5rem;
-        }
-        .career-path .company:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            left: 12px;
-            top: 30px;
-            bottom: -15px;
-            width: 2px;
-            background: #4F46E5;
-        }
-        .contact-item {
-            cursor: pointer;
-            padding: 0.25rem 0.5rem;
-            border-radius: 0.375rem;
-            transition: all 0.2s;
-        }
-        .contact-item:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-        .skill-bar {
-            height: 8px;
-            background-color: #e2e8f0;
-            border-radius: 4px;
-        }
-        .skill-progress {
-            height: 100%;
-            background-color: #4a5568;
-            border-radius: 4px;
-        }
-        .experience-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 1rem;
-        }
-        .experience-details {
-            min-width: 200px;
-        }
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            justify-content: flex-end;
-            max-width: 500px;
-        }
-        .tech-chip {
-            padding: 0.25rem 0.75rem;
-            background-color: #EEF2FF;
-            color: #4F46E5;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            white-space: nowrap;
-        }
-    </style>
-    <script>
-        function calculateExperience() {
-            const startDate = new Date('2015-12-17');
-            const today = new Date();
-            const years = Math.floor((today - startDate) / (1000 * 60 * 60 * 24 * 365.25));
-            document.getElementById('experience-years').textContent = years;
-        }
-
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text)
-                .then(() => {
-                    const tooltip = document.getElementById('tooltip');
-                    tooltip.textContent = 'Copied!';
-                    setTimeout(() => {
-                        tooltip.textContent = 'Click to copy';
-                    }, 2000);
-                });
-        }
-    </script>
+    <link href="styles.css" rel="stylesheet">    
 </head>
 <body class="bg-gray-100" onload="calculateExperience()">
+    <script src="script.js"></script>
     <!-- Header Section -->
     <header class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-4 flex items-center gap-8">
             <img src="img/my-passport-photo__1_-removebg-preview.png" alt="Profile Picture" class="rounded-full w-32 h-32 object-cover border-4 border-white shadow-lg">
             <div>
                 <h1 class="text-4xl font-bold mb-2">Madawa Karunarathna</h1>
-                <h2 class="text-xl text-gray-300 mb-4">Senior Software Engineer</h2>
+                <div class="space-y-1">
+                    <h2 class="text-xl text-gray-300">Software Professional | <span id="experience-years"></span>+ Years (Full Stack Developer)</h2>
+                    <h3 class="text-gray-400 text-sm">.NET | Angular | React | Azure | AWS | Microservice | SQL |  </h3>
+                </div>
                 <div class="flex gap-6 text-gray-300">
                     <div>📍 Colombo, Sri Lanka</div>
-                    <div class="contact-item" onclick="copyToClipboard('madawakumara89@gmail.com')">
-                        📧 m*****89@gmail.com
+                    <div class="flex items-center gap-2">
+                        <a href="mailto:madawakumara89@gmail.com" class="contact-item flex items-center">
+                            📧 Send email
+                        </a>
+                        <button class="contact-item p-1 hover:bg-white/10 rounded" onclick="copyToClipboard('madawakumara89@gmail.com')" title="Copy email">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
                     </div>
                     <div class="contact-item" onclick="copyToClipboard('https://linkedin.com/in/madawakarunarathna')">
                         <a href="https://linkedin.com/in/madawakarunarathna" target="_blank" rel="noopener noreferrer"></a>
