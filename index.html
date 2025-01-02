@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Madawa Karunarathna - Senior Software Engineer</title>
     <script src="scripts/particles.min.js"></script>
+    <script src="scripts/main.js"></script>    
+    <script src="scripts/particles.js"></script>
+    <script src="scripts/tabs.js"></script>
     <link rel="stylesheet" href="styles/tailwind.min.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/particles.css">
 </head>
-<body class="bg-gray-100" onload="calculateExperience()">
-    <script src="scripts/main.js"></script>    
-    <script src="scripts/particles.js"></script>
-    <script src="scripts/tabs.js"></script>
-
+<body class="bg-gray-100" onload="calculateExperience()">   
     <div id="particles-js" class="particles-container"></div>
     <!-- Header Section -->
     <header class="bg-gray-800 text-white py-12">
@@ -618,39 +617,11 @@
         </div>
     </main>
 
-    <!-- KEEP YOUR EXISTING FOOTER -->
-
+    <!-- FOOTER Section-->
     <footer class="bg-gray-800 text-white py-6 mt-8">
         <div class="container mx-auto px-4 text-center">
             <p>&copy; 2024 Madawa Karunarathna. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        particlesJS("particles-js", {
-            particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: "#ffffff" },
-                opacity: { value: 0.2 },
-                size: { value: 3 },
-                line_linked: {
-                enable: true,
-                distance: 150,
-                color: "#ffffff",
-                opacity: 0.1,
-                width: 1
-                },
-                move: {
-                enable: true,
-                speed: 2,
-                direction: "none",
-                random: false,
-                straight: false,
-                out_mode: "out",
-                bounce: false,
-                }
-            }
-        });
-    </script>
 </body>
 </html>

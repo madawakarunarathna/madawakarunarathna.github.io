@@ -83,25 +83,48 @@
 }
 
 /* Tabs */
-.tab-btn {
-    color: #6B7280;
+/* Main Navigation Tabs (dark background) */
+/* Add subtle transition for smoother hover effects */
+.main-tab-btn {
+    color: #9CA3AF;  /* Lighter gray for dark background */
     border-bottom-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.main-tab-btn:hover {
+    color: #FFFFFF;  /* White for better contrast on dark background */
+    border-bottom-color: #FFFFFF;
+}
+
+.main-tab-btn.active-tab {
+    color: #FFFFFF;  /* White text for active state on dark background */
+    border-bottom-color: #FFFFFF;
+}
+
+/* Profile Section Tabs (light background) */
+.tab-btn {
+    color: #6B7280;  /* Gray for light background */
+    border-bottom-color: transparent;
+    transition: all 0.2s ease-in-out;
 }
 
 .tab-btn:hover {
-    color: #4F46E5;
+    color: #4F46E5;  /* Indigo for light background */
     border-bottom-color: #4F46E5;
 }
 
-.active-tab {
-    color: #4F46E5;
+.tab-btn.active-tab {
+    color: #4F46E5;  /* Indigo for active state on light background */
     border-bottom-color: #4F46E5;
 }
 
-.tab-content {
+/* Shared tab content styles */
+.tab-content,
+.main-tab-content {
     display: none;
 }
 
-.tab-content.active {
+.tab-content.active,
+.main-tab-content.active {
     display: block;
 }
