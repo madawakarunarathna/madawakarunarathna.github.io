@@ -217,7 +217,8 @@
                                     <div class="text-gray-600 text-sm">(May 2023 - Dec 2024)</div>
                                 </div>
                                 <div class="tech-stack">
-                                    <span class="tech-chip">.NET 6/8</span>
+                                    <span class="tech-chip">.NET 6</span>
+                                    <span class="tech-chip">.NET 8</span>
                                     <span class="tech-chip">RabbitMQ</span>
                                     <span class="tech-chip">Hangfire</span>
                                     <span class="tech-chip">gRPC</span>
@@ -242,6 +243,7 @@
                                     <span class="tech-chip">React</span>
                                     <span class="tech-chip">SQL</span>
                                     <span class="tech-chip">Azure Service Bus</span>
+                                    <span class="tech-chip">Spring boot</span>
                                 </div>
                             </div>
                         </div>
@@ -256,7 +258,7 @@
                                     </div>
                                     <div class="tech-stack">
                                         <span class="tech-chip">.NET Core</span>
-                                        <span class="tech-chip">Angular</span>
+                                        <span class="tech-chip">React</span>
                                         <span class="tech-chip">Azure</span>
                                         <span class="tech-chip">MicroService</span>
                                     </div>
@@ -267,8 +269,10 @@
                                         <div class="text-gray-600 text-sm">(July 2019 - June 2021)</div>
                                     </div>
                                     <div class="tech-stack">
+                                        <span class="tech-chip">.NET Core</span>
                                         <span class="tech-chip">AngularJS</span>
                                         <span class="tech-chip">KnockoutJS</span>
+                                        <span class="tech-chip">JavaScript</span>
                                         <span class="tech-chip">Sitefinity</span>
                                     </div>
                                 </div>
@@ -281,6 +285,7 @@
                                         <span class="tech-chip">SharePoint</span>
                                         <span class="tech-chip">.NET</span>
                                         <span class="tech-chip">AngularJS</span>
+                                        <span class="tech-chip">jQuery</span>
                                     </div>
                                 </div>
                             </div>
@@ -315,6 +320,7 @@
                                     <span class="tech-chip">SSIS</span>
                                     <span class="tech-chip">SSRS</span>
                                     <span class="tech-chip">SignalR</span>
+                                    <span class="tech-chip">d3js</span>
                                 </div>
                             </div>
                         </div>
@@ -351,9 +357,9 @@
                     <button onclick="switchTab('education')" class="tab-btn w-1/4 py-4 px-1 text-center border-b-2 font-medium text-sm" data-tab="education">
                         Education
                     </button>
-                    <!-- <button onclick="switchTab('achievements')" class="tab-btn w-1/4 py-4 px-1 text-center border-b-2 font-medium text-sm" data-tab="achievements">
+                    <button onclick="switchTab('achievements')" class="tab-btn w-1/4 py-4 px-1 text-center border-b-2 font-medium text-sm" data-tab="achievements">
                         Achievements
-                    </button> -->
+                    </button>
                 </nav>
             </div>
 
@@ -362,6 +368,53 @@
                 <!-- Projects Tab -->
                 <div id="projects" class="tab-content active">
                     <div class="space-y-2">
+
+                        <!-- Horizon Project -->
+                        <div class="project-container">
+                            <button onclick="toggleProject('horizon-project')" class="w-full project-header p-4 bg-white rounded-lg border hover:shadow-sm transition-all flex justify-between items-center">
+                                <div class="flex items-center gap-4">
+                                    <svg class="transform transition-transform project-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <h4 class="text-lg font-semibold text-gray-800">Horizon - Debt Collection Autonomus Tool</h4>
+                                </div>
+                                <div id="horizon-project-top-chips" class="flex flex-wrap gap-2">
+                                    <span class="tech-chip">C#</span>
+                                    <span class="tech-chip">.NET Core</span>
+                                    <span class="tech-chip">Java</span>
+                                    <span class="tech-chip">SQL</span>
+                                    <span class="tech-chip">Azure DevOps</span>
+                                    <span class="tech-chip">Git</span>
+                                    <span class="tech-chip">Angular 10.x</span>
+                                    <span class="tech-chip">Azure Service Bus</span>
+                                </div>
+                                <span class="text-gray-500">Feb 2022 - Present</span>
+                            </button>
+                            <div id="horizon-project" class="project-content hidden">
+                                <div class="p-6 border border-t-0 rounded-b-lg">
+                                    <p class="text-gray-600 mb-4">A platform that provides information on jurisdiction and regulations of various countries in one place. Working as a member of the Processing team, responsible for handling structured XML files and data extraction into SQL tables.</p>
+                                    <div class="mb-4">
+                                        <h5 class="font-medium text-gray-700 mb-2">Key Responsibilities:</h5>
+                                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                            <li>Handled structured files in XML format and extracted data into SQL tables</li>
+                                            <li>Contributed to the development and implementation of critical system components</li>
+                                            <li>Collaborated with team members to ensure project success</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="tech-chip">C#</span>
+                                        <span class="tech-chip">.NET Core</span>
+                                        <span class="tech-chip">Java</span>
+                                        <span class="tech-chip">SQL</span>
+                                        <span class="tech-chip">Azure DevOps</span>
+                                        <span class="tech-chip">Git</span>
+                                        <span class="tech-chip">Angular 10.x</span>
+                                        <span class="tech-chip">Azure Service Bus</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Cube Project -->
                         <div class="project-container">
                             <button onclick="toggleProject('cube-project')" class="w-full project-header p-4 bg-white rounded-lg border hover:shadow-sm transition-all flex justify-between items-center">
@@ -407,7 +460,16 @@
                                     </svg>
                                     <h4 class="text-lg font-semibold text-gray-800">Paycor Retainer - Payroll Processing System</h4>
                                 </div>
-                                <span class="text-gray-500">Oct 2020 - Feb 2022</span>
+                                <div class="flex items-center gap-x-2">
+                                    <!-- Chipped Label for Year -->
+                                    <span class="px-3 py-1 text-xs font-semibold text-white bg-blue-600 rounded-full">
+                                        Excelly LLC
+                                    </span>                                    
+                                    <span class="px-3 py-1 text-xs font-semibold text-white bg-blue-600 rounded-full">
+                                        Oct 2020 - Feb 2022
+                                    </span>
+                                </div>
+                                <!-- <span class="text-gray-500"></span> -->
                             </button>
                             <div id="paycor-project" class="project-content hidden">
                                 <div class="p-6 border border-t-0 rounded-b-lg">
@@ -564,6 +626,7 @@
 
         function toggleProject(projectId) {
             const projectContent = document.getElementById(projectId);
+            const projectHeadChip = document.getElementById(projectId+'-top-chips');
             const projectContainer = projectContent.parentElement;
             const allProjects = document.querySelectorAll('.project-container');
             
@@ -571,8 +634,16 @@
             allProjects.forEach(container => {
                 if (container !== projectContainer) {
                     container.classList.remove('expanded');
-                    container.querySelector('.project-content').classList.remove('show');
-                    container.querySelector('.project-content').classList.add('hidden');
+                    const otherContent = container.querySelector('.project-content');
+                    const otherChips = container.querySelector('.project-header .tech-chip');
+
+                    if (otherContent) {
+                        otherContent.classList.add('hidden');
+                        otherContent.classList.remove('show');
+                    }
+                    if (otherChips) {
+                        otherChips.classList.remove('hidden');
+                    }
                 }
             });
             
@@ -580,5 +651,10 @@
             projectContainer.classList.toggle('expanded');
             projectContent.classList.toggle('hidden');
             projectContent.classList.toggle('show');
+
+            if (projectHeadChip) {
+                projectHeadChip.classList.toggle('hidden');
+            }
+            
         }
     </script>
