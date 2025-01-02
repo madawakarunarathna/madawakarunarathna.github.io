@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Madawa Karunarathna - Senior Software Engineer</title>
     <script src="scripts/particles.min.js"></script>
-    <script src="scripts/main.js"></script>
     <link rel="stylesheet" href="styles/tailwind.min.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/particles.css">
 </head>
 <body class="bg-gray-100" onload="calculateExperience()">
-    
+    <script src="scripts/main.js"></script>    
+    <script src="scripts/particles.js"></script>
+    <script src="scripts/tabs.js"></script>
+
     <div id="particles-js" class="particles-container"></div>
     <!-- Header Section -->
     <header class="bg-gray-800 text-white py-12">
@@ -624,102 +626,7 @@
         </div>
     </footer>
 
-    <!-- <style>
-        .tab-btn {
-            color: #6B7280;
-            border-bottom-color: transparent;
-        }
-        .tab-btn:hover {
-            color: #4F46E5;
-            border-bottom-color: #4F46E5;
-        }
-        .active-tab {
-            color: #4F46E5;
-            border-bottom-color: #4F46E5;
-        }
-        .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-        }
-    </style> -->
-
     <script>
-        // Add this new function for main tabs
-        function switchMainTab(tabId) {
-            document.querySelectorAll('.main-tab-content').forEach(content => {
-                content.classList.add('hidden');
-                content.classList.remove('active');
-            });
-            
-            document.querySelectorAll('.main-tab-btn').forEach(btn => {
-                btn.classList.remove('active-tab');
-            });
-            
-            document.getElementById(`${tabId}-tab`).classList.remove('hidden');
-            document.getElementById(`${tabId}-tab`).classList.add('active');
-            
-            event.target.classList.add('active-tab');
-        }
-
-        // KEEP YOUR EXISTING SCRIPTS
-        function switchTab(tabId) {
-            // Hide all tab contents
-            document.querySelectorAll('.tab-content').forEach(content => {
-                content.classList.remove('active');
-                content.classList.add('hidden');
-            });
-            
-            // Remove active class from all tabs
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active-tab');
-            });
-            
-            // Show selected tab content
-            const selectedTab = document.getElementById(tabId);
-            selectedTab.classList.remove('hidden');
-            selectedTab.classList.add('active');
-            
-            // Add active class to selected tab button
-            const selectedBtn = document.querySelector(`[data-tab="${tabId}"]`);
-            selectedBtn.classList.add('active-tab');
-        }
-
-        function toggleProject(projectId) {
-            const projectContent = document.getElementById(projectId);
-            const projectHeadChip = document.getElementById(projectId+'-top-chips');
-            const projectContainer = projectContent.parentElement;
-            const allProjects = document.querySelectorAll('.project-container');
-            
-            // Close other projects
-            allProjects.forEach(container => {
-                if (container !== projectContainer) {
-                    container.classList.remove('expanded');
-                    const otherContent = container.querySelector('.project-content');
-                    const otherChips = container.querySelector('.project-header .tech-chip');
-
-                    if (otherContent) {
-                        otherContent.classList.add('hidden');
-                        otherContent.classList.remove('show');
-                    }
-                    if (otherChips) {
-                        otherChips.classList.remove('hidden');
-                    }
-                }
-            });
-            
-            // Toggle current project
-            projectContainer.classList.toggle('expanded');
-            projectContent.classList.toggle('hidden');
-            projectContent.classList.toggle('show');
-
-            if (projectHeadChip) {
-                projectHeadChip.classList.toggle('hidden');
-            }
-            
-        }
-
         particlesJS("particles-js", {
             particles: {
                 number: { value: 80, density: { enable: true, value_area: 800 } },

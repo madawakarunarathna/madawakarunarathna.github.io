@@ -17,3 +17,5 @@ function copyToClipboard(text) {
             console.error('Failed to copy:', err);
         });
 }
+
+document.addEventListener('DOMContentLoaded', calculateExperience);
