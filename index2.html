@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Professional Title</title>
+    <script src="scripts/particles.min.js"></script>
+    <script src="scripts/main.js"></script>    
+    <script src="scripts/particles.js"></script>
+    <script src="scripts/tabs.js"></script>
+    <link rel="stylesheet" href="styles/tailwind.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/particles.css">
+</head>
+<body onload="calculateExperience()">   
+    <div id="particles-js" class="particles-container"></div>
+    
+    <!-- Header Section -->
+    <header class="py-12">
+        <div class="container mx-auto px-4 flex items-center gap-8">
+            <img src="img/profile-photo.jpg" alt="Profile Picture" class="rounded-full w-32 h-32 object-cover border-4 header-photo shadow-lg">
+            <div>
+                <h1 class="text-4xl font-bold mb-2">Your Name</h1>
+                <div class="space-y-1">
+                    <h2 class="text-xl">Professional Title <span id="experience-years"></span>+ Years</h2>
+                    <h2 class="text-lg">Key Skills & Technologies</h2>
+                </div>
+                <div class="flex gap-6 mt-2">
+                    <div>📍 Location</div>
+                    <div class="flex items-center gap-2">
+                        <a href="mailto:your.email@example.com" class="contact-item">
+                            📧 Send email
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="your-linkedin-url" target="_blank" rel="noopener noreferrer">
+                            🔗 LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Main Navigation -->
+        <nav class="flex border-b border-gray-700 mb-6">
+            <button onclick="switchMainTab('profile')" class="main-tab-btn active-tab px-6 py-3 border-b-2 font-semibold">
+                Profile
+            </button>
+            <button onclick="switchMainTab('projects')" class="main-tab-btn px-6 py-3 border-b-2 font-semibold">
+                Projects
+            </button>
+            <button onclick="switchMainTab('rates')" class="main-tab-btn px-6 py-3 border-b-2 font-semibold">
+                Rates & Availability
+            </button>
+            <button onclick="switchMainTab('recommendations')" class="main-tab-btn px-6 py-3 border-b-2 font-semibold">
+                Recommendations
+            </button>
+        </nav>
+
+        <!-- Profile Tab Content -->
+        <div id="profile-tab" class="main-tab-content active">
+            <!-- Professional Summary -->
+            <section class="section-card">
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="text-secondary">
+                    [Your professional summary goes here]
+                </p>
+            </section>
+
+            <!-- Skills and Experience Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Technical Skills -->
+                <div class="section-card">
+                    <h3 class="section-title">Technical Skills</h3>
+                    <div class="space-y-4">
+                        <!-- Sample Skill -->
+                        <div>
+                            <div class="skill-label">Skill Name</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <!-- Add more skills -->
+                    </div>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="section-card md:col-span-2">
+                    <h3 class="section-title">Work Experience</h3>
+                    <div class="career-path">
+                        <!-- First Experience -->
+                        <div class="company">
+                            <h4 class="font-semibold">Current Company Inc</h4>
+                            <div class="ml-3 experience-row">
+                                <div class="experience-details">
+                                    <div class="text-gray-300">Senior Developer</div>
+                                    <div class="text-gray-400 text-sm">(2022 - Present)</div>
+                                </div>
+                                <div class="tech-stack">
+                                    <span class="tech-chip">React</span>
+                                    <span class="tech-chip">Node.js</span>
+                                    <span class="tech-chip">AWS</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Second Experience -->
+                        <div class="company">
+                            <h4 class="font-semibold">Previous Company Ltd</h4>
+                            <div class="ml-3 experience-row">
+                                <div class="experience-details">
+                                    <div class="text-gray-300">Developer</div>
+                                    <div class="text-gray-400 text-sm">(2020 - 2022)</div>
+                                </div>
+                                <div class="tech-stack">
+                                    <span class="tech-chip">Angular</span>
+                                    <span class="tech-chip">.NET</span>
+                                    <span class="tech-chip">SQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <section class="section-card">
+                <h3 class="section-title">Certifications</h3>
+                <div class="cert-card">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-semibold">Certification Name</h4>
+                            <p class="text-secondary">Issuing Organization</p>
+                        </div>
+                        <span class="date-range-badge">Year</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="section-card">
+                <h3 class="section-title">Education</h3>
+                <div class="edu-card">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-semibold">Degree Name</h4>
+                            <p class="text-secondary">Institution Name</p>
+                        </div>
+                        <span class="date-range-badge">Year</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Projects Tab Content -->
+        <div id="projects-tab" class="main-tab-content hidden">
+            <!-- Sample Project -->
+            <div class="project-container">
+                <button onclick="toggleProject('project-1')" class="w-full project-header flex justify-between items-center">
+                    <div class="flex items-center gap-4">
+                        <svg class="transform transition-transform project-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h4 class="text-lg font-semibold">Project Name</h4>
+                    </div>
+                    <div class="flex items-center gap-x-2">
+                        <span class="company-name-badge">Company Name</span>
+                        <span class="date-range-badge">Date Range</span>
+                    </div>
+                </button>
+                <div id="project-1" class="project-content hidden">
+                    <p class="mb-4">Project description goes here</p>
+                    <div class="mb-4">
+                        <h5 class="font-medium mb-2">Key Responsibilities:</h5>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>Responsibility 1</li>
+                            <li>Responsibility 2</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-chip">Technology 1</span>
+                        <span class="tech-chip">Technology 2</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rates & Availability Tab Content -->
+<div id="rates-tab" class="main-tab-content hidden">
+    <section class="section-card">
+        <h3 class="section-title">Hourly Rates</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Backend Development Rate -->
+            <div class="bg-[#0f172a] p-6 rounded-lg border border-gray-700">
+                <h4 class="text-lg font-semibold text-gray-200">Backend Development</h4>
+                <div class="mt-2 text-3xl font-bold text-indigo-500">$65/hr</div>
+                <ul class="mt-4 space-y-2 text-gray-300">
+                    <li class="flex items-center">
+                        <span class="mr-2 text-indigo-500">✓</span>
+                        .NET Core / C# Development
+                    </li>
+                    <li class="flex items-center">
+                        <span class="mr-2 text-indigo-500">✓</span>
+                        API Development
+                    </li>
+                    <li class="flex items-center">
+                        <span class="mr-2 text-indigo-500">✓</span>
+                        Database Design
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Frontend Development Rate -->
+            <div class="bg-[#0f172a] p-6 rounded-lg border border-gray-700">
+                <h4 class="text-lg font-semibold text-gray-200">Frontend Development</h4>
+                <div class="mt-2 text-3xl font-bold text-indigo-500">$55/hr</div>
+                <ul class="mt-4 space-y-2 text-gray-300">
+                    <li class="flex items-center">
+                        <span class="mr-2 text-indigo-500">✓</span>
+                        React/Angular Development
+                    </li>
+                    <li class="flex items-center">
+                        <span class="mr-2 text-indigo-500">✓</span>
+                        UI/UX Implementation
+                    </li>
+                    <li class="flex items-center">
+                        <span class="mr-2 text-indigo-500">✓</span>
+                        Performance Optimization
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Availability Section -->
+        <div class="mt-8">
+            <h4 class="text-lg font-semibold mb-4 text-gray-200">Availability</h4>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-[#0f172a] p-4 rounded-lg border border-gray-700 text-center">
+                    <div class="font-semibold text-indigo-400">Mon-Fri</div>
+                    <div class="text-sm text-gray-300">9 AM - 6 PM</div>
+                </div>
+                <div class="bg-[#0f172a] p-4 rounded-lg border border-gray-700 text-center">
+                    <div class="font-semibold text-indigo-400">Time Zone</div>
+                    <div class="text-sm text-gray-300">GMT+5:30</div>
+                </div>
+                <div class="bg-[#0f172a] p-4 rounded-lg border border-gray-700 text-center">
+                    <div class="font-semibold text-indigo-400">Response Time</div>
+                    <div class="text-sm text-gray-300">Within 24h</div>
+                </div>
+                <div class="bg-[#0f172a] p-4 rounded-lg border border-gray-700 text-center">
+                    <div class="font-semibold text-indigo-400">Availability</div>
+                    <div class="text-sm text-gray-300">40h/week</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Recommendations Tab Content -->
+<div id="recommendations-tab" class="main-tab-content hidden">
+    <section class="section-card">
+        <h3 class="section-title">Client Recommendations</h3>
+        <div class="space-y-6">
+            <!-- First Recommendation -->
+            <div class="bg-[#0f172a] p-6 rounded-lg border border-gray-700 relative">
+                <div class="absolute left-0 top-0 bottom-0 w-1 bg-indigo-500 rounded-l-lg"></div>
+                <p class="text-gray-300 italic mb-4">
+                    "Madawa is an exceptional developer who consistently delivers high-quality work. His expertise in .NET and Azure helped us modernize our entire infrastructure."
+                </p>
+                <div class="flex items-center gap-4">
+                    <div>
+                        <p class="font-semibold text-gray-200">John Doe</p>
+                        <p class="text-gray-400 text-sm">CTO, Tech Solutions Inc</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Recommendation -->
+            <div class="bg-[#0f172a] p-6 rounded-lg border border-gray-700 relative">
+                <div class="absolute left-0 top-0 bottom-0 w-1 bg-indigo-500 rounded-l-lg"></div>
+                <p class="text-gray-300 italic mb-4">
+                    "Working with Madawa was a great experience. His technical skills and communication made our project successful."
+                </p>
+                <div class="flex items-center gap-4">
+                    <div>
+                        <p class="font-semibold text-gray-200">Jane Smith</p>
+                        <p class="text-gray-400 text-sm">Project Manager, Digital Innovators</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+    </main>
+
+    <footer>
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

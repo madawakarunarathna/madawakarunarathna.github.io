@@ -1,0 +1,137 @@
+:root {
+    /* Light theme colors */
+    --bg-primary: #f8fafc;  /* Softer white background */
+    --bg-secondary: #ffffff;
+    --bg-card: #ffffff;
+    --text-primary: #1e293b;  /* Slate-900 */
+    --text-secondary: #475569;  /* Slate-600 */
+    --border-color: #e2e8f0;  /* Slate-200 */
+    --header-bg: #1e293b;  /* Slate-900 */
+    --header-text: #f8fafc;  /* Slate-50 */
+    --accent-color: #4f46e5;  /* Indigo-600 */
+    --hover-bg: #f1f5f9;  /* Slate-100 */
+    --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    --tech-chip-bg: #eef2ff;  /* Indigo-50 */
+    --tech-chip-text: #4f46e5;  /* Indigo-600 */
+    --timeline-color: #4f46e5;  /* Indigo-600 */
+}
+
+[data-theme="dark"] {
+    /* Dark theme colors */
+    --bg-primary: #0f172a;  /* Slate-900 */
+    --bg-secondary: #1e293b;  /* Slate-800 */
+    --bg-card: #1e293b;  /* Slate-800 */
+    --text-primary: #f8fafc;  /* Slate-50 */
+    --text-secondary: #cbd5e1;  /* Slate-300 */
+    --border-color: #334155;  /* Slate-700 */
+    --header-bg: #020617;  /* Slate-950 */
+    --header-text: #f8fafc;  /* Slate-50 */
+    --accent-color: #6366f1;  /* Indigo-500 */
+    --hover-bg: #334155;  /* Slate-700 */
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    --tech-chip-bg: #312e81;  /* Indigo-900 */
+    --tech-chip-text: #c7d2fe;  /* Indigo-200 */
+    --timeline-color: #6366f1;  /* Indigo-500 */
+}
+
+/* Base styles */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Card styles */
+.theme-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+/* Text styles */
+.theme-text-primary {
+    color: var(--text-primary);
+}
+
+.theme-text-secondary {
+    color: var(--text-secondary);
+}
+
+/* Header styles */
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+}
+
+/* Tech chip styles */
+.tech-chip {
+    background-color: var(--tech-chip-bg) !important;
+    color: var(--tech-chip-text) !important;
+}
+
+/* Timeline styles */
+.career-path .company::before {
+    color: var(--timeline-color);
+}
+
+.career-path .company:not(:last-child)::after {
+    background: var(--timeline-color);
+}
+
+/* Section backgrounds */
+section {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+}
+
+/* Tab styles */
+.main-tab-btn {
+    color: var(--text-secondary);
+}
+
+.main-tab-btn:hover,
+.main-tab-btn.active-tab {
+    color: var(--text-primary);
+    border-bottom-color: var(--accent-color);
+}
+
+/* Project container styles */
+.project-container {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+}
+
+.project-container:hover {
+    background-color: var(--hover-bg);
+}
+
+/* Certification and Education card styles */
+.cert-card,
+.edu-card {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+}
+
+.cert-card:hover,
+.edu-card:hover {
+    background-color: var(--hover-bg);
+}
+
+/* Theme toggle button */
+.theme-toggle-btn {
+    background-color: var(--accent-color) !important;
+    color: var(--header-text) !important;
+    box-shadow: var(--card-shadow) !important;
+}
+
+/* Particles container */
+.particles-container {
+    background: var(--header-bg) !important;
+}
+
+/* Transition for theme switching */
+* {
+    transition: background-color 0.3s ease, 
+                color 0.3s ease, 
+                border-color 0.3s ease, 
+                box-shadow 0.3s ease;
+}

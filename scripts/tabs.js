@@ -32,42 +32,26 @@ function switchTab(tabId) {
     selectedBtn.classList.add('active-tab');
 }
 
+// Find the existing toggleProject function in tabs.js and replace it with this:
 function toggleProject(projectId) {
     const projectContent = document.getElementById(projectId);
-    const projectHeadChip = document.getElementById(projectId + '-top-chips');
     const projectContainer = projectContent.parentElement;
     const allProjects = document.querySelectorAll('.project-container');
     
-    // Close all other projects and show their chips
+    // Close all other projects
     allProjects.forEach(container => {
         if (container !== projectContainer) {
             container.classList.remove('expanded');
             const otherContent = container.querySelector('.project-content');
-            const otherProjectId = otherContent.id;
-            const otherChips = document.getElementById(otherProjectId + '-top-chips');
-
             if (otherContent) {
                 otherContent.classList.add('hidden');
                 otherContent.classList.remove('show');
-            }
-            if (otherChips) {
-                otherChips.classList.remove('hidden'); // Always show chips when collapsing
             }
         }
     });
     
     // Toggle the clicked project
-    const isExpanding = !projectContainer.classList.contains('expanded');
     projectContainer.classList.toggle('expanded');
     projectContent.classList.toggle('hidden');
     projectContent.classList.toggle('show');
-
-    // Handle chips visibility based on expansion state
-    if (projectHeadChip) {
-        if (isExpanding) {
-            projectHeadChip.classList.add('hidden');
-        } else {
-            projectHeadChip.classList.remove('hidden');
-        }
-    }
 }

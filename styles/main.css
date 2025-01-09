@@ -1,3 +1,84 @@
+/* Base styles */
+body {
+    background-color: #0f172a;
+    color: #b2b5b9;
+}
+
+/* Header styles */
+header {
+    background-color: #0f172a;
+    color: #b2b5b9;
+}
+
+.header-photo {
+    border-color: #1e293b;
+}
+
+/* Contact items */
+.contact-item {
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    transition: all 0.2s;
+}
+
+.contact-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Section Cards */
+.section-card {
+    background-color: #1e293b;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    color: #c9cbce;
+    margin-bottom: 1.5rem;
+}
+
+.section-title {
+    color: #b2b5b9;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Main Navigation Tabs */
+.main-tab-btn {
+    color: #9CA3AF;
+    border-bottom-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.main-tab-btn:hover {
+    color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+}
+
+.main-tab-btn.active-tab {
+    color: #18e9a5;
+    border-bottom-color: #FFFFFF;
+}
+
+/* Skill bars */
+.skill-bar {
+    height: 8px;
+    background-color: #334155;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.skill-progress {
+    height: 100%;
+    background-color: #4F46E5;
+    border-radius: 4px;
+}
+
+.skill-label {
+    color: #e2e8f0;
+    margin-bottom: 0.5rem;
+}
+
+/* Experience Timeline */
 .career-path {
     position: relative;
 }
@@ -5,6 +86,7 @@
 .career-path .company {
     position: relative;
     padding-left: 35px;
+    margin-bottom: 2rem;
 }
 
 .career-path .company::before {
@@ -28,42 +110,6 @@
     background: #4F46E5;
 }
 
-.contact-item {
-    cursor: pointer;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.375rem;
-    transition: all 0.2s;
-}
-
-.contact-item:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Skill bars */
-.skill-bar {
-    height: 8px;
-    background-color: #e2e8f0;
-    border-radius: 4px;
-}
-
-.skill-progress {
-    height: 100%;
-    background-color: #4a5568;
-    border-radius: 4px;
-}
-
-/* Experience section */
-.experience-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-}
-
-.experience-details {
-    min-width: 200px;
-}
-
 /* Tech stack */
 .tech-stack {
     display: flex;
@@ -75,50 +121,101 @@
 
 .tech-chip {
     padding: 0.25rem 0.75rem;
-    background-color: #EEF2FF;
-    color: #4F46E5;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
     border-radius: 9999px;
     font-size: 0.75rem;
     white-space: nowrap;
 }
 
-/* Tabs */
-/* Main Navigation Tabs (dark background) */
-/* Add subtle transition for smoother hover effects */
-.main-tab-btn {
-    color: #9CA3AF;  /* Lighter gray for dark background */
-    border-bottom-color: transparent;
+/* Projects Section */
+.project-container {
+    margin-bottom: 1rem;
+}
+
+.project-header {
+    background-color: #1e293b;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    color: #b2b5b9;
+    padding: 1rem;
+}
+
+.project-header:hover {
+    background-color: #2d3748;
+}
+
+.project-content {
+    background-color: #0f172a;
+    padding: 1.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.project-container.expanded .project-arrow {
+    transform: rotate(90deg);
+}
+
+.project-arrow {
+    transition: transform 0.3s ease;
+}
+
+/* Badges */
+.company-name-badge {
+    background-color: #4b5563;
+    color: #b2b5b9;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+}
+
+.date-range-badge {
+    background-color: #3b82f6;
+    color: #FFFFFF;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+}
+
+/* Certifications and Education */
+.cert-card,
+.edu-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
     transition: all 0.2s ease-in-out;
 }
 
-.main-tab-btn:hover {
-    color: #FFFFFF;  /* White for better contrast on dark background */
-    border-bottom-color: #FFFFFF;
+.cert-card:hover,
+.edu-card:hover {
+    transform: translateY(-2px);
+    border-color: #4F46E5;
 }
 
-.main-tab-btn.active-tab {
-    color: #FFFFFF;  /* White text for active state on dark background */
-    border-bottom-color: #FFFFFF;
+/* Footer */
+footer {
+    background-color: #0f172a;
+    color: #b2b5b9;
+    padding: 1.5rem 0;
 }
 
-/* Profile Section Tabs (light background) */
-.tab-btn {
-    color: #6B7280;  /* Gray for light background */
-    border-bottom-color: transparent;
-    transition: all 0.2s ease-in-out;
+/* Utility classes */
+.text-primary {
+    color: #e2e8f0;
 }
 
-.tab-btn:hover {
-    color: #4F46E5;  /* Indigo for light background */
-    border-bottom-color: #4F46E5;
+.text-secondary {
+    color: #cbd5e1;
 }
 
-.tab-btn.active-tab {
-    color: #4F46E5;  /* Indigo for active state on light background */
-    border-bottom-color: #4F46E5;
+/* Particles background */
+.particles-container {
+    background: linear-gradient(45deg, #0f172a, #1e293b);
 }
 
-/* Shared tab content styles */
+/* Tab content */
 .tab-content,
 .main-tab-content {
     display: none;
@@ -127,4 +224,103 @@
 .tab-content.active,
 .main-tab-content.active {
     display: block;
+}
+
+/* Experience Timeline Styles */
+.career-path {
+    position: relative;
+}
+
+.career-path .company {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 2rem;
+}
+
+.career-path .company::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    top: -4px;
+    color: #4F46E5;  /* Indigo-600 */
+    width: 25px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.career-path .company:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 30px;
+    bottom: -15px;
+    width: 2px;
+    background: #4F46E5;  /* Indigo-600 */
+}
+
+.experience-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.experience-details {
+    min-width: 200px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    max-width: 500px;
+}
+
+.tech-chip {
+    padding: 0.25rem 0.75rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+
+/* Rates & Availability Styles */
+.rate-card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.rate-card:hover {
+    transform: translateY(-2px);
+}
+
+.availability-item {
+    transition: all 0.2s ease-in-out;
+}
+
+.availability-item:hover {
+    border-color: #4F46E5;
+}
+
+/* Recommendations Styles */
+.recommendation-card {
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+}
+
+.recommendation-card:hover {
+    transform: translateX(4px);
+}
+
+.recommendation-quote {
+    font-style: italic;
+    position: relative;
+}
+
+.recommendation-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
